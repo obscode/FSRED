@@ -1,0 +1,13 @@
+imarith.operand1 = 
+imarith.op = 
+imarith.operand2 = 
+imarith.result = 
+imarith.title = ""
+imarith.divzero = 0.
+imarith.hparams = ""
+imarith.pixtype = "real"
+imarith.calctype = "real"
+imarith.verbose = no
+imarith.noact = no
+imarith.mode = "ql"
+# EOF

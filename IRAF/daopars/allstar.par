@@ -1,0 +1,19 @@
+allstar.image = ""
+allstar.photfile = "default"
+allstar.psfimage = "default"
+allstar.allstarfile = "default"
+allstar.rejfile = "default"
+allstar.subimage = "default"
+allstar.datapars = ""
+allstar.daopars = ""
+allstar.wcsin = logical
+allstar.wcsout = logical
+allstar.wcspsf = logical
+allstar.cache = yes
+allstar.verify = no
+allstar.update = no
+allstar.verbose = no
+allstar.version = 2
+allstar.mode = "ql"
+text = yes
+# EOF

@@ -1,0 +1,12 @@
+guiding 1
+go
+move_coord -5.5 20.5
+go
+move_coord 26.0 -15.0
+go
+move_coord -15.0 -26.0
+go
+move_coord -26.0 15.0
+go
+move_coord 20.5 5.5
+

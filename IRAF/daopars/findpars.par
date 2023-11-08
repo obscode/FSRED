@@ -1,0 +1,11 @@
+findpars.threshold = 1.5
+findpars.nsigma = 1.5
+findpars.ratio = 1.
+findpars.theta = 0.
+findpars.sharplo = 0.2
+findpars.sharphi = 1.
+findpars.roundlo = -1.
+findpars.roundhi = 1.
+findpars.mkdetections = no
+findpars.mode = "ql"
+# EOF

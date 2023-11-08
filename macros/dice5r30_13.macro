@@ -1,0 +1,12 @@
+guiding 0
+go
+move -4.8 17.8
+go
+move 22.6 -13.0
+go
+move -13.0 -22.6
+go
+move -22.6 13.0
+go
+move 17.8 4.8
+

@@ -1,0 +1,17 @@
+fitskypars.salgorithm = "gauss"
+fitskypars.annulus = 15.
+fitskypars.dannulus = 20.
+fitskypars.skyvalue = 0.
+fitskypars.smaxiter = 10
+fitskypars.sloclip = 0.
+fitskypars.shiclip = 0.
+fitskypars.snreject = 50
+fitskypars.sloreject = 3.
+fitskypars.shireject = 3.
+fitskypars.khist = 3.
+fitskypars.binsize = 0.1
+fitskypars.smooth = no
+fitskypars.rgrow = 0.
+fitskypars.mksky = no
+fitskypars.mode = "ql"
+# EOF

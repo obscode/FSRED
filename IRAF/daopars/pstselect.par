@@ -1,0 +1,24 @@
+pstselect.image = ""
+pstselect.photfile = "default"
+pstselect.pstfile = "default"
+pstselect.maxnpsf = 100
+pstselect.mkstars = no
+pstselect.plotfile = ""
+pstselect.datapars = ""
+pstselect.daopars = ""
+pstselect.interactive = no
+pstselect.plottype = "mesh"
+pstselect.icommands = ""
+icommands.p_filename = ""
+text = yes
+pstselect.gcommands = ""
+pstselect.wcsin = logical
+pstselect.wcsout = logical
+pstselect.cache = yes
+pstselect.verify = no
+pstselect.update = no
+pstselect.verbose = no
+pstselect.graphics = no
+pstselect.display = no
+pstselect.mode = "ql"
+# EOF

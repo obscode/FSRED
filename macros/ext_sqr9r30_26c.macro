@@ -1,0 +1,46 @@
+guiding 1
+obstype astro
+go
+move_coord 22.5 -13.0
+go
+move_coord 13.0 22.5
+go
+move_coord -22.5 13.0
+go
+move_coord -22.5 13.0
+go
+move_coord -13.0 -22.5
+go
+move_coord -13.0 -22.5
+go
+move_coord 22.5 -13.0
+go
+move_coord 22.5 -13.0
+go
+move_coord -9.5 35.5
+
+guiding 0
+move 1000.0 1000.0
+obstype sky
+go
+move 22.5 -13.0
+go
+move 13.0 22.5
+go
+move -22.5 13.0
+go
+move -22.5 13.0
+go
+move -13.0 -22.5
+go
+move -13.0 -22.5
+go
+move 22.5 -13.0
+go
+move 22.5 -13.0
+go
+move -9.5 35.5
+
+move -1000.0 -1000.0
+guiding 1
+obstype astro

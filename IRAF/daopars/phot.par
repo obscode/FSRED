@@ -1,0 +1,24 @@
+phot.image = ""
+phot.coords = "default"
+phot.output = "default"
+phot.skyfile = ""
+phot.plotfile = ""
+phot.datapars = ""
+phot.centerpars = ""
+phot.fitskypars = ""
+phot.photpars = ""
+phot.interactive = no
+phot.radplots = no
+phot.icommands = ""
+icommands.p_filename = ""
+phot.gcommands = ""
+phot.wcsin = logical
+phot.wcsout = logical
+phot.cache = yes
+phot.verify = no
+phot.update = no
+phot.verbose = no
+phot.graphics = no
+phot.display = no
+phot.mode = "ql"
+# EOF

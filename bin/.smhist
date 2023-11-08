@@ -1,0 +1,13 @@
+ctype white
+data std22mass.objects
+read {name 1.s J 4 H 6 K 8 jj 10 hh 12 kk 14 }
+set dj = J-jj
+set dh = H-hh
+set dk = K-kk
+limits 10 16 -0.5 0.5
+window 1 1 1 1
+box
+points J dj
+points H dh
+points K dk
+quit

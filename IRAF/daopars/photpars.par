@@ -1,0 +1,6 @@
+photpars.weighting = "constant"
+photpars.apertures = "3."
+photpars.zmag = 25.
+photpars.mkapert = no
+photpars.mode = "ql"
+# EOF

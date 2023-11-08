@@ -1,0 +1,21 @@
+datapars.scale = 1.
+datapars.fwhmpsf = 3.
+datapars.emission = yes
+datapars.sigma = 1.
+datapars.datamin = INDEF
+datapars.datamax = INDEF
+datapars.noise = "poisson"
+datapars.ccdread = ""
+datapars.gain = ""
+datapars.readnoise = 1.
+datapars.epadu = 1.
+datapars.exposure = ""
+datapars.airmass = ""
+datapars.filter = ""
+datapars.obstime = ""
+datapars.itime = 1.
+datapars.xairmass = "INDEF"
+datapars.ifilter = "INDEF"
+datapars.otime = "INDEF"
+datapars.mode = "ql"
+# EOF

@@ -1,0 +1,34 @@
+move_coord_async 8.9 12.9
+go
+move_coord_async 4.6 -14.6
+go
+move_coord_async -3.2 -11.1
+go
+move_coord_async -4.8 18.0
+go
+move_coord_async -12.1 9.5
+go
+move_coord_async -8.1 -8.5
+go
+move_coord_async 15.5 -8.5
+go
+move_coord_async -12.4 -4.1
+go
+move_coord_async -0.6 18.8
+go
+move_coord_async 11.0 -2.9
+go
+move_coord_async 15.8 -1.8
+go
+move_coord_async -0.9 -14.7
+go
+move_coord_async -11.2 -2.5
+go
+move_coord_async -15.5 -2.5
+go
+move_coord_async 1.1 12.4
+go
+move_coord_async 8.3 -12.6
+go
+move_coord_async 3.6 12.2
+

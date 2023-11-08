@@ -1,0 +1,8 @@
+seepsf.psfimage = ""
+seepsf.image = ""
+seepsf.dimension = INDEF
+seepsf.xpsf = INDEF
+seepsf.ypsf = INDEF
+seepsf.magnitude = INDEF
+seepsf.mode = "ql"
+# EOF

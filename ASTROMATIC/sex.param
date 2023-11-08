@@ -1,0 +1,28 @@
+X_IMAGE
+Y_IMAGE
+MAG_AUTO
+MAGERR_AUTO
+A_IMAGE
+B_IMAGE
+THETA_IMAGE
+ELLIPTICITY
+FWHM_IMAGE
+FLAGS
+BACKGROUND
+CLASS_STAR
+FLUX_RADIUS
+FLUX_AUTO
+IMAFLAGS_ISO
+NIMAFLAGS_ISO
+
+# FLAGS ARE 
+# 1: bright neighbors
+# 2: originally blended
+# 4: At least one pixel near saturation
+# 8: close to image boundary
+# 16: aperture data is corrupt
+# 32: isophotal data is corrupt
+# 64: memory overflow during deblending
+# 128: memory overflow during extraction
+
+

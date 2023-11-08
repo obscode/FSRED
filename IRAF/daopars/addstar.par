@@ -1,0 +1,22 @@
+addstar.image = ""
+addstar.photfile = ""
+addstar.psfimage = "default"
+addstar.addimage = "default"
+addstar.minmag = 
+addstar.maxmag = 
+addstar.nstar = 100
+addstar.datapars = ""
+addstar.daopars = ""
+addstar.simple_text = no
+addstar.seed = 0.
+addstar.nimage = 1
+addstar.idoffset = 0
+addstar.wcsin = logical
+addstar.wcsout = logical
+addstar.wcspsf = logical
+addstar.cache = yes
+addstar.verify = no
+addstar.update = no
+addstar.verbose = no
+addstar.mode = "ql"
+# EOF

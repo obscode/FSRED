@@ -1,0 +1,12 @@
+mskregions.regions = 
+mskregions.masks = ""
+mskregions.refimages = ""
+mskregions.dims = "512,512"
+mskregions.depth = 0
+mskregions.regnumber = "constant"
+mskregions.regval = 2
+mskregions.exprdb = "none"
+mskregions.append = no
+mskregions.verbose = yes
+mskregions.mode = "ql"
+# EOF

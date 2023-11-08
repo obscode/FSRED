@@ -1,0 +1,17 @@
+nstar.image = ""
+nstar.groupfile = "default"
+nstar.psfimage = "default"
+nstar.nstarfile = "default"
+nstar.rejfile = "default"
+nstar.datapars = ""
+nstar.daopars = ""
+nstar.wcsin = logical
+nstar.wcsout = logical
+nstar.wcspsf = logical
+nstar.cache = no
+nstar.verify = no
+nstar.update = no
+nstar.verbose = no
+nstar.mode = "ql"
+text = yes
+# EOF

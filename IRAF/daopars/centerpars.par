@@ -1,0 +1,13 @@
+centerpars.calgorithm = "gauss"
+centerpars.cbox = 5.
+centerpars.cthreshold = 0.
+centerpars.minsnratio = 1.
+centerpars.cmaxiter = 10
+centerpars.maxshift = 1.
+centerpars.clean = no
+centerpars.rclean = 1.
+centerpars.rclip = 2.
+centerpars.kclean = 3.
+centerpars.mkcenter = no
+centerpars.mode = "ql"
+# EOF

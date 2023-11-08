@@ -1,0 +1,82 @@
+box 1 2 0 0
+set xbin = 0,1,0.1
+set ybin = 0,1,0.1
+set contlevels = 0,200,10
+plotbincontour xbin ybin x y contlevels
+set x = gaussdev(10000)*0.1 + 0.5
+set y = gaussdev(10000)*0.1 + 0.5
+erase
+box
+plotbincontour xbin ybin x y contlevels
+erase
+set xbin = 0,1,0.01
+set ybin = 0,1,0.01
+set contlevels = 0,10000,100
+plotbincontour xbin ybin x y contlevels
+box
+plotbincontour xbin ybin x y contlevels
+set contlevels = 0,10000,1000
+plotbincontour xbin ybin x y contlevels
+points x y
+plotbincontour xbin ybin x y contlevels
+plotbingreyscale xbin ybin x y contlevels
+erase
+plotbincontour xbin ybin x y contlevels
+quit
+set r = 0.7
+do i=0,i<10
+do i=0,i<10 {
+do i=0;i<10 {
+quit
+set r = 1,10
+set t = r >  5 ? 1 : 0
+print {r t}
+set r = r >  5 ? 1 : 0
+print {r t}
+set r = 1,10
+set r = -10,10
+set t = abs(r)< 5 ? 1 : 0
+print {r t}
+quit
+window 1 1 1 1
+limits 0 2048 0 2048
+box
+data test.cat
+read {x 1 y 2 i j 6}
+read !{x 1 y 2 i j 6}
+read {x 1 y 2 i 5 j 6}
+read {x 1 y 2 i 5 j 6 }
+!cat test.cat
+read !{x 1 y 2 i 5 j 6 }
+points x y
+ctype red
+points i j
+erase
+limits -4000 4000 -4000 4000
+box
+points x y
+ctype white
+points i j
+erase
+box
+points x y
+erase
+box
+limits -1000 3000 -1000 3000
+points x y
+erase
+limits -2000 3000 -2000 3000
+box
+points x y
+limits -2000 3000 -1000 4000
+erase
+box
+points x y
+quit
+help astats
+set r = (0.1 0.2)
+set r = {0.1 0.2}
+print {r}
+astats r
+print {astats}
+quit

@@ -1,0 +1,25 @@
+geomap.input = ""
+geomap.database = ""
+geomap.xmin = 1
+geomap.xmax = 2048
+geomap.ymin = 1
+geomap.ymax = 2048
+geomap.transforms = ""
+geomap.results = ""
+geomap.fitgeometry = "general"
+geomap.function = "polynomial"
+geomap.xxorder = 4
+geomap.xyorder = 4
+geomap.xxterms = "half"
+geomap.yxorder = 4
+geomap.yyorder = 4
+geomap.yxterms = "half"
+geomap.maxiter = 1
+geomap.reject = 2.
+geomap.calctype = "real"
+geomap.verbose = no
+geomap.interactive = no
+geomap.graphics = "stdgraph"
+geomap.cursor = ""
+geomap.mode = "ql"
+# EOF

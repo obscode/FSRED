@@ -1,0 +1,14 @@
+mimstatistics.images = 
+mimstatistics.imasks = 
+mimstatistics.omasks = ""
+mimstatistics.fields = 
+mimstatistics.lower = INDEF
+mimstatistics.upper = INDEF
+mimstatistics.nclip = 0
+mimstatistics.lsigma = 3.
+mimstatistics.usigma = 3.
+mimstatistics.binwidth = 0.1
+mimstatistics.format = no
+mimstatistics.cache = yes
+mimstatistics.mode = "ql"
+# EOF

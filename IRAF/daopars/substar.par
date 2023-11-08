@@ -1,0 +1,17 @@
+substar.image = ""
+substar.photfile = "default"
+substar.exfile = ""
+substar.psfimage = "default"
+substar.subimage = "default"
+substar.datapars = ""
+substar.daopars = ""
+substar.wcsin = logical
+substar.wcsout = logical
+substar.wcspsf = logical
+substar.cache = yes
+substar.verify = no
+substar.update = no
+substar.verbose = no
+substar.mode = "ql"
+text = yes
+# EOF

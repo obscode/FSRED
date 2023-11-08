@@ -1,0 +1,24 @@
+move_coord 10.6 -12.2
+go
+move_coord -9.0 10.8
+go
+move_coord -11.0 12.9
+go
+move_coord 0.6 -13.8
+go
+move_coord 19.4 -2.8
+go
+move_coord 2.9 13.2
+go
+move_coord -15.3 0.3
+go
+move_coord 4.4 -17.4
+go
+move_coord -14.1 -3.7
+go
+move_coord 7.8 14.9
+go
+move_coord 14.0 11.8
+go
+move_coord -10.3 -14.0
+

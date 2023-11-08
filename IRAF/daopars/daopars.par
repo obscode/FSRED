@@ -1,0 +1,23 @@
+daopars.function = "gauss"
+daopars.varorder = 2
+daopars.nclean = 1
+daopars.saturated = no
+daopars.matchrad = 3.
+daopars.psfrad = 15.
+daopars.fitrad = 5.
+daopars.recenter = yes
+daopars.fitsky = yes
+daopars.groupsky = yes
+daopars.sannulus = 5.
+daopars.wsannulus = 11.
+daopars.flaterr = 0.75
+daopars.proferr = 5.
+daopars.maxiter = 50
+daopars.clipexp = 6
+daopars.cliprange = 2.5
+daopars.mergerad = INDEF
+daopars.critsnratio = 1.
+daopars.maxnstar = 100000
+daopars.maxgroup = 100
+daopars.mode = "ql"
+# EOF

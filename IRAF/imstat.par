@@ -1,0 +1,12 @@
+imstatistics.images = 
+imstatistics.fields = 
+imstatistics.lower = INDEF
+imstatistics.upper = INDEF
+imstatistics.nclip = 3.
+imstatistics.lsigma = 3.
+imstatistics.usigma = 3.
+imstatistics.binwidth = 0.1
+imstatistics.format = no
+imstatistics.cache = yes
+imstatistics.mode = "ql"
+# EOF

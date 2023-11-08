@@ -1,0 +1,44 @@
+move_coord 9.1 -11.0
+go
+move_coord -15.1 5.4
+go
+move_coord 13.3 4.6
+go
+move_coord -9.8 13.3
+go
+move_coord 3.5 -12.6
+go
+move_coord 2.1 -12.8
+go
+move_coord -7.2 14.2
+go
+move_coord 7.2 9.7
+go
+move_coord 11.4 -6.3
+go
+move_coord -7.6 -11.2
+go
+move_coord 2.4 16.2
+go
+move_coord 2.7 -15.8
+go
+move_coord -14.6 -5.1
+go
+move_coord 17.0 0.4
+go
+move_coord -14.5 5.3
+go
+move_coord -9.9 11.8
+go
+move_coord -4.4 -12.2
+go
+move_coord -0.3 14.3
+go
+move_coord 13.5 -2.1
+go
+move_coord -11.1 8.5
+go
+move_coord 1.2 -16.7
+go
+move_coord 11.1 2.1
+

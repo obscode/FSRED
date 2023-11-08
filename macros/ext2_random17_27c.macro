@@ -1,0 +1,157 @@
+guiding 1
+obstype astro
+go
+coord 17.0 21.1
+go
+coord -15.9 -33.2
+go
+coord -5.1 27.8
+go
+coord 11.9 -27.3
+go
+coord -24.8 30.8
+go
+coord 37.3 -31.3
+go
+coord -27.3 11.9
+go
+coord 4.0 26.7
+go
+coord -15.4 -25.9
+go
+coord 29.2 6.5
+go
+coord -23.2 -23.2
+go
+coord 17.8 41.9
+go
+coord 1.6 -44.8
+go
+coord 17.8 25.4
+go
+coord -49.4 -8.9
+go
+coord 51.0 2.4
+go
+coord -26.5 0.3
+
+
+guiding 0
+move 900.0 900.0
+obstype sky
+go
+move 25.1 10.0
+go
+move -30.8 -26.5
+go
+move 17.0 39.4
+go
+move 5.1 -38.6
+go
+move -26.7 10.3
+go
+move 28.3 18.9
+go
+move -15.1 -39.4
+go
+move -10.0 27.3
+go
+move 27.0 1.9
+go
+move -30.5 16.5
+go
+move 17.5 -20.5
+go
+move -16.5 -23.0
+go
+move 22.4 28.1
+go
+move -28.6 -1.1
+go
+move 24.3 -20.5
+go
+move -31.3 18.6
+go
+move 22.7 -1.4
+
+
+guiding 1
+obstype astro
+go
+coord -1.1 -27.0
+go
+coord -4.3 35.1
+go
+coord 29.4 -11.6
+go
+coord -30.5 -10.8
+go
+coord 25.9 28.3
+go
+coord -28.4 -18.6
+go
+coord 18.1 -20.2
+go
+coord -3.5 34.3
+go
+coord -25.6 -23.2
+go
+coord 33.5 4.0
+go
+coord -22.4 28.9
+go
+coord 27.0 -14.3
+go
+coord -34.0 -13.0
+go
+coord 29.2 27.5
+go
+coord -35.9 -19.4
+go
+coord 20.8 17.8
+go
+coord 1.9 -17.8
+
+
+guiding 0
+move 900.0 900.0
+obstype sky
+go
+move 1.9 27.0
+go
+move -14.3 -25.9
+go
+move 18.1 -24.0
+go
+move 15.9 33.2
+go
+move -26.7 7.6
+go
+move -5.9 -42.1
+go
+move 11.3 31.0
+go
+move -17.0 -22.7
+go
+move 34.0 0.3
+go
+move -8.1 26.2
+go
+move -17.0 -28.3
+go
+move 18.6 20.8
+go
+move -27.8 3.8
+go
+move 28.3 -15.4
+go
+move -25.9 26.5
+go
+move 31.9 -13.0
+go
+move -17.3 -4.9
+
+
+move -900.0 -900.0
+guiding 1
+obstype astro

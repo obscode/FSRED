@@ -1,0 +1,8 @@
+imreplace.images = 
+imreplace.value = 100.
+imreplace.imaginary = 0.
+imreplace.lower = 10
+imreplace.upper = INDEF
+imreplace.radius = 0.
+imreplace.mode = "ql"
+# EOF

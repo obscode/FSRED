@@ -1,0 +1,21 @@
+daofind.image = ""
+daofind.output = "default"
+daofind.starmap = ""
+daofind.skymap = ""
+daofind.datapars = ""
+daofind.findpars = ""
+daofind.boundary = "nearest"
+daofind.constant = 0.
+daofind.interactive = no
+daofind.icommands = ""
+icommands.p_filename = ""
+daofind.gcommands = ""
+daofind.wcsout = logical
+daofind.cache = yes
+daofind.verify = no
+daofind.update = yes
+daofind.verbose = no
+daofind.graphics = no
+daofind.display = no
+daofind.mode = "ql"
+# EOF

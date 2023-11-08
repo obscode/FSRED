@@ -1,0 +1,12 @@
+guiding 1
+go
+move_coord_async -9.2 34.2
+go
+move_coord_async 43.4 -25.0
+go
+move_coord_async -25.0 -43.4
+go
+move_coord_async -43.4 25.0
+go
+move_coord_async 34.2 9.2
+

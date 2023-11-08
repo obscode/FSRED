@@ -1,0 +1,32 @@
+guiding 1
+obstype astro
+go
+coord 15.0 30.0
+go
+coord 15.0 -45.0
+go
+coord -45.0 -15.0
+go
+coord -15.0 45.0
+go
+coord 30.0 -15.0
+
+
+guiding 0
+move 900.0 900.0
+obstype sky
+go
+move 15.0 30.0
+go
+move 15.0 -45.0
+go
+move -45.0 -15.0
+go
+move -15.0 45.0
+go
+move 30.0 -15.0
+
+
+move -900.0 -900.0
+guiding 1
+obstype astro
