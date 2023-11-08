@@ -330,8 +330,8 @@ int main(int argc, char *argv[])
   }
   gsl_vector_free (dxp);
   gsl_vector_free (dyp);
-  gsl_vector_free (c1);
-  gsl_vector_free (c2);
+  //gsl_vector_free (c1);
+  //gsl_vector_free (c2);
   gsl_matrix_free (cov);
   gsl_matrix_free (X1);
   gsl_matrix_free (X2);
@@ -402,6 +402,8 @@ int main(int argc, char *argv[])
   } else if ( image != NULL ) {
     fits_close_file(infptr1, &status);
   }
+  gsl_vector_free (c1);
+  gsl_vector_free (c2);
 
   exit(0);
     }
