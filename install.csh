@@ -329,7 +329,7 @@ rm -fr $install_dir/wcstools
 cfitsio:
 foreach var1 ( libcfitsio.a )
     set found = 1
-    foreach var2 ( /usr/local/lib/ ) 
+    foreach var2 ( /usr/lib/ /usr/lib64/ /usr/local/lib/ ) 
 	set var = $var2$var1
 	ls $var >>& /dev/null
 	if ( $status == 0 ) then
@@ -389,7 +389,7 @@ rm -fr $install_dir/cfitsio
 gsl:
 foreach var1 ( libgsl.a  )
     set found = 1
-    foreach var2 ( /usr/local/lib/ /usr/local/gsl/lib/ ) 
+    foreach var2 ( /usr/lib/ /usr/lib64/ /usr/local/lib/ /usr/local/gsl/lib/ ) 
 	set var = $var2$var1
 	ls $var >>& /dev/null
 	if ( $status == 0 ) then
@@ -729,7 +729,7 @@ rm -fr $install_dir/fftw
 plplot:
 foreach var1 ( libplplotd.so )
     set found = 1
-    foreach var2 ( /usr/local/lib/ ) 
+    foreach var2 ( /usr/lib/ /usr/lib64/ /usr/local/lib/ ) 
 	set var = $var2$var1
 	ls $var >>& /dev/null
 	if ( $status == 0 ) then
@@ -974,9 +974,11 @@ else
 endif
 #exit 0
 
-
-
-
+printf "\nFetching the Calibraion data\n"
+cd $fsred
+wget https://users.obs.carnegiescience.edu/cburns/shared/FSRED_CALIB.tgz
+tar -zxf FSRED_CALIB.tgz
+rm -f FSRED_CALIB.tgz
 
 printf "\n ------------------------------------------------ \n"
 printf " FINISHED... No guarantees, but try fsred.csh         "
