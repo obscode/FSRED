@@ -9,14 +9,15 @@ endif
 #echo $scriptpath
 #exit
 # INITIALIZE DEFAULTS
-set iraf = "/iraf/iraf/"   # THIS IS CORRECT FOR (MOST)
+source ${scriptpath}/system.csh
+#set iraf = "/iraf/iraf/"   # THIS IS CORRECT FOR (MOST)
 #set irafarch = "macintel"  # THIS IS CORRECT FOR (MOST)MACS
-set irafarch = "macosx"  # THIS IS CORRECT FOR (MOST)MACS
-alias sedi "sed -i '' "    # THIS IS CORRECT FOR MACS
+#set irafarch = "macosx"  # THIS IS CORRECT FOR (MOST)MACS
+#alias sedi "sed -i '' "    # THIS IS CORRECT FOR MACS
 
 ###############################################
 # alias PROGRAM EXECUTABLES
-alias images ${iraf}/bin.${irafarch}/x_images.e
+alias images ${images}
 set proto = ${iraf}/bin.${irafarch}/x_proto.e
 alias proto  ${proto}
 ###############################################
