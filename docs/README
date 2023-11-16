@@ -1,0 +1,163 @@
+
+To install FSRED:
+
+tar -zxf FSRED.tar.gz
+cd FSRED
+./install.csh
+
+FSRED WILL INSTALL THE FOLLOWING, IF IT DID NOT ALREADY FIND THEM IN THE STANDARD LOCATIONS:  
+IRAF ...............  /iraf/iraf
+SEXTRACTOR  ........  /usr/local/bin
+SCAMP ..............  /usr/local/bin 
+SWARP ..............  /usr/local/bin
+GCC  ...............  /usr/local/bin
+WCSTOOLS  ..........  /usr/local/bin
+GSL libraries ......  /usr/local/bin
+CFITSIO libraries  .  /usr/local/bin
+
+
+PLEASE NOTE:  These scripts were designed a on a Mac.  It has so far worked with:
+Leopard
+Snow Leopard
+Lion
+Mountian Lion
+  
+Hopefully, if the 3rd party software is installed correctly these script will work, but seriously... what are the chances of that?
+
+
+
+template.csh and template.config are an example for reducing a nights data.  
+template.csh contains some variable that need to be set such as data paths, dates and filters to look for.
+template.config contains a typical list of parameters that can be tweaked to achieve the best results.  
+
+
+
+
+Suggested usage:
+1. Create a directory to contain the reduction data.
+2. From a terminal move to created directory and run fsgroup.csh with the path to the raw data:
+   The default search cone is 3 arc-minutes, which is good for normal Fourstar dither patterns.
+   This can be changed by using the -s option. 
+
+% mkdir -p REDUCED/2012_10_11 ; cd REDUCED/2012_10_11
+% fsgroup.csh -p /path/to/raw/data
+
+
+3. Inspect the output displayed on the terminal and verify that the desired group was properly discovered.
+   The file names for each logical group are written to a ????.list file where ???? is the run number of 
+   the first image in the logical set.   Edit the output list manually if needed. A "#" symbol can be used to
+   comment out and ignore an entry.
+
+4. Run fsred.csh on desired logical group.
+
+% fsred.csh -d outputdir -p /path/to/raw/data -s sky.list -t target.list -cbw -xy 
+
+-d = where outputdir is the directory to place the output product(s) 
+-p = path to where the raw data is located (fits files can be in .gz or .fz format).  
+-c = combine data in loops first before linearization, faster (currently must set this). 
+-b = background subtract the data (otherwise simply subtract a constant).
+-r = remove intermediate products (at the end of the script).
+-w = weight images by seeing and background during the final combine step.
+-x = run SCAMP to find astrometric solution.
+-y = run SWARP to resample and co-add the data.
+-s = sky.list = ????.list created by fsgroup.csh that should be used as sky frames.  If the target field is sparsely populated it can be used as its own sky by entering it here.
+-t = target.list = ????.list created by fsgroup.csh that should be considered the target frames.  
+
+NOTE: The default configuration uses the archival FLAT, DARK and Bad Pixel frames.  
+
+    The final output will be created in outputdir/TARGETS/DATE-OBS_FILTER_OBJECT.fits.  The photometric zeropoint is added by bootstrapping to available 2MASS photometry, OR whichever Fourstar or UKIRT standard happens to be in the field. The zeropoint should be checked more carefully by comparing columns 6 and 16 of the file coadd.coo which are the 2MASS magnitude and Fourstar instrumental magnitude respectively.     
+
+
+5. If you have multi-band data and want the Astrometric solutions to line up run the data sets seperately first, then run the astrometry over both data sets.  Finally resample and coadd each data set:
+
+# REDUCE THE DATA IN EACH BAND UP TO THE RESAMPLING. 
+fsred -d outputdir/J -p /path/to/raw/data -s 0001.list -t 0001.list  -cbw
+fsred -d outputdir/H -p /path/to/raw/data -s 0010.list -t 0010.list  -cbw
+fsred -d outputdir/K -p /path/to/raw/data -s 0019.list -t 0019.list  -cbw
+
+# FIND COMMMON ASTROMETRIC SOLUTION
+mkdir outputdir/TARGETS
+fsred -d outputdir -x
+
+# RESAMPLE THE IMAGES AND COMBINE EACH OF THEM
+fsred -d outputdir/J -wy
+fsred -d outputdir/H -wy
+fsred -d outputdir/K -wy
+
+# REMOVE INTERMEDIATE PRODUCTS AFTER EVERYTHING LOOKS OKAY.   
+fsred -d outputdir/J -r
+fsred -d outputdir/H -r
+fsred -d outputdir/K -r
+
+
+6. Good Luck!  amonson@obs.carnegiescience.edu
+
+
+
+
+ADVANCED USAGE:
+
+A comma can be used to join lists: 
+-t 0005.list,0010.list    will concatenate 0005.list and 0010.list
+
+
+
+-f dir          = use existing flat fields in "dir", must have names: {filter}_{chip}.fits
+-f ????.list    =  create a flat field from the data in ????.list
+-k cold.list,warm.list = create a K-band flat field by differencing a set a cold flats from warm flats
+
+-z run psfex on the final image.
+
+The -q option will perform a quick pass reduction with many flags turned off (latent, transient, saturation masking) for faster reduction.  It will still yield a first pass sky subtraced and zero-pointed image for rough image quality and depth estimating.
+
+fsred -d test -s test.list -q
+
+Many subtle details about the reduction can be changed in the fsred.csh script itself.  More examples to come. 
+
+
+
+
+WORKING EXAMPLES:
+The following script reduces the data for the cluster IC1276 which was centered on chip 2 for a sqr-9 dither pattern and then centered on chip 1 for a sqr-9 dither pattern. 
+
+#################################################################
+#!/bin/csh
+
+set raw = /Volumes/FourStarSAN/Raw/2012_10_22
+
+set name = IC1276
+set filter = Ks
+set tmp = ""
+
+# USE CHIPS WITHOUT THE CLUSTER TO DETERMINE SKY BACKGROUND
+cat 0023.list | egrep 'c[1,3,4]' >> sky.lists
+cat 0059.list | egrep 'c[2,3,4]' >> sky.lists
+
+# REDUCE EACH EPOCH UP TO FINAL RESAMPLING
+fsred -d $name/$filter/epoch_01 -p $raw -s sky.lists -t 0023.list -cwb 
+fsred -d $name/$filter/epoch_02 -p $raw -s sky.lists -t 0059.list -cwb 
+
+# FIND COMMON ASTROMETRIC SOLUTION FOR ALL DATA SETS
+foreach epoch ( `ls -d $name/$filter/epoch_*` )
+    set tmp = $tmp:$name/$filter/$epoch
+end
+mkdir -p $name/$filter/TARGETS
+fsred -d $name/$filter -x -t $tmp
+
+# RESAMPLE AND CO-ADD EACH EPOCH 
+foreach epoch ( `ls -d $name/$filter/epoch_*` )
+    fsred -d $name/$filter/$epoch -wy
+end
+
+# CO-ADD ALL EPOCHS 
+fsred -d $name/$filter -t $tmp -wy
+
+exit 0
+##################################################################
+
+
+
+
+# MAKE A COVERAGE MAP FOR A SPECIFIC RA, DEC, ROT and dither pattern.
+cov.csh -filter H -ra 10.0000 -dec 0.0000 -rot 0
+
