@@ -15,6 +15,8 @@ FSRED requires the following to be in working order on your computer:
  - [WCSTools](http://tdc-www.harvard.edu/wcstools/)
  - [GSL Libraries](https://www.gnu.org/software/gsl/)
  - [CFITSIO Libraries](https://heasarc.gsfc.nasa.gov/fitsio/)
+ - [FSRED Calibration Files](https://users.obs.carnegiescience.edu/cburns/FSRED/FSRED_calib.tgz)
+   These should be extracted into the base FSRED folder.
 
 There is an install script in the distribution which will try to install
 versions of the above, but they are out of date for modern operating 
