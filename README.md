@@ -5,16 +5,17 @@ Observatories software support group.
 
 ## Required software
 
-FSRED requires the following to be in working order on your computer:
+FSRED requires the following to be in working order on your computer (the versions
+in parentheses are those known to work with the current version):
 
  - GCC C compiler
- - [IRAF](https://iraf-community.github.io/)
- - [Source Extractor](https://www.astromatic.net/software/sextractor/)
- - [SCAMP](https://www.astromatic.net/software/scamp/)
- - [SWarp](https://www.astromatic.net/software/swarp/)
- - [WCSTools](http://tdc-www.harvard.edu/wcstools/)
- - [GSL Libraries](https://www.gnu.org/software/gsl/)
- - [CFITSIO Libraries](https://heasarc.gsfc.nasa.gov/fitsio/)
+ - [IRAF](https://iraf-community.github.io/) (2.17)
+ - [Source Extractor](https://www.astromatic.net/software/sextractor/) (2.28.0)
+ - [SCAMP](https://www.astromatic.net/software/scamp/) (2.10.0)
+ - [SWarp](https://www.astromatic.net/software/swarp/) (2.41.5)
+ - [WCSTools](http://tdc-www.harvard.edu/wcstools/) (3.9.7)
+ - [GSL Libraries](https://www.gnu.org/software/gsl/) (1.15)
+ - [CFITSIO Libraries](https://heasarc.gsfc.nasa.gov/fitsio/) (4.3.0)
  - [FSRED Calibration Files](https://users.obs.carnegiescience.edu/cburns/FSRED/FSRED_calib.tgz)
    These should be extracted into the base FSRED folder.
 
